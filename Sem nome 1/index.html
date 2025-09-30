@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Você não pode ficar aqui...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background: #000000;
+      overflow-y: scroll;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      position: relative;
+    }
+
+    body {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    body::before {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+      background:
+        radial-gradient(circle at top left, rgba(107,0,0,0.6), transparent 60%),
+        radial-gradient(circle at top right, rgba(107,0,0,0.6), transparent 60%),
+        radial-gradient(circle at bottom left, rgba(107,0,0,0.6), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(107,0,0,0.6), transparent 60%);
+      mix-blend-mode: screen;
+      animation: pulseGlow 4s ease-in-out infinite;
+    }
+
+    body::after {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 80px 40px at 15% 10%, rgba(0,0,0,0.8), transparent 70%),
+        radial-gradient(ellipse 100px 50px at 85% 15%, rgba(0,0,0,0.7), transparent 80%),
+        radial-gradient(ellipse 120px 60px at 10% 90%, rgba(0,0,0,0.75), transparent 75%),
+        radial-gradient(ellipse 90px 45px at 90% 85%, rgba(0,0,0,0.7), transparent 80%);
+      filter: blur(6px) drop-shadow(0 0 3px white);
+      animation: slowFloat 10s ease-in-out infinite alternate;
+      mix-blend-mode: screen;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slowFloat {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        transform: translate(10px, 5px) scale(1.05);
+      }
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+    }
+
+    .spacer {
+      height: 545vh;
+    }
+
+    .text-section {
+      font-size: 3rem;
+      margin: 8rem 1rem;
+      text-shadow: 0 0 5px #ff0000;
+    }
+
+    footer {
+      margin-top: 10rem;
+      font-size: 5rem;
+      font-weight: bold;
+      color: #ff4444;
+      text-shadow: 0 0 15px #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <h1>...</h1>
+
+  <!-- Imagem adicionada aqui -->
+  <img src="https://cdn.discordapp.com/attachments/1295925011416219790/1422679975672287283/ALGORITHMOS.png?ex=68dd8d7a&is=68dc3bfa&hm=798e30349391687d49a22106577540546326c566676a6b0c658e630cd63a231a&" alt="imagem misteriosa" style="max-width: 100%; height: auto; margin-top: 2rem; border-radius: 10px;" />
+
+  <div class="spacer"></div>
+
+  <div class="text-section">ele sabe que você está aqui...</div>
+
+  <div class="spacer"></div>
+
+  <div class="text-section">ele está vindo</div>
+
+  <div class="spacer"></div>
+
+  <div class="text-section">Me ajuda...</div>
+
+  <div class="spacer"></div>
+
+  <div class="text-section">Eu imploro...</div>
+
+  <div class="spacer"></div>
+
+  <footer>RÁPIDO!</footer>
+
+  <div class="spacer"></div>
+
+  <footer>CORRE!</footer>
+
+  <div class="spacer"></div>
+</body>
+</html>
